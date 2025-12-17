@@ -20,9 +20,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: doc
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -38,9 +35,9 @@ jobs:
         uses: actions/cache@v4
         with:
           path: |
-            doc/node_modules
+            node_modules
             ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('doc/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
@@ -53,7 +50,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: doc/build
+          path: build
 
   deploy:
     environment:
