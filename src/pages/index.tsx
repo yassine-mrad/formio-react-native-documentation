@@ -94,7 +94,7 @@ function HomepageHeader() {
         >
           <Link
             className="button button--secondary button--lg"
-            to="/docs/getting-started/installation"
+            to="/docs/next/getting-started/installation"
           >
             Get Started 🚀
           </Link>
@@ -198,7 +198,7 @@ function MyForm() {
           <div className={styles.buttons}>
             <Link
               className="button button--primary button--lg"
-              to="/docs/getting-started/installation"
+              to="/docs/next/getting-started/installation"
             >
               Learn More →
             </Link>

@@ -26,5 +26,5 @@ Information on how to submit a pull request and what to expect during the review
 
 ## Link to GitHub
 
--   [Issues]([GITHUB_URL_PLACEHOLDER]/issues)
--   [Discussions]([GITHUB_URL_PLACEHOLDER]/discussions)
+-   [Issues](https://github.com/yassine-mrad/formio-react-native/issues)
+-   [Discussions](https://github.com/yassine-mrad/formio-react-native/discussions)

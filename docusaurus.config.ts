@@ -110,15 +110,15 @@ const config: Config = {
           items: [
             {
               label: 'Getting Started',
-              to: '/docs/getting-started/installation',
+              to: '/docs/next/getting-started/installation',
             },
             {
               label: 'API Reference',
-              to: '/docs/api/components',
+              to: '/docs/next/api/components',
             },
             {
               label: 'Examples',
-              to: '/docs/examples/basic',
+              to: '/docs/next/examples/basic-examples',
             },
           ],
         },
