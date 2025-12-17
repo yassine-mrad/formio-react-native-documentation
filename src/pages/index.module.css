@@ -1,0 +1,225 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 8rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ifm-color-primary-darkest);
+  color: #fff;
+  background: linear-gradient(180deg, var(--ifm-color-primary), var(--ifm-color-primary-darkest));
+  box-shadow: var(--ifm-navbar-shadow);
+}
+
+.heroBanner h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.heroBanner p {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 4rem 0;
+  }
+
+  .heroBanner h1 {
+    font-size: 2.5rem;
+  }
+
+  .heroBanner p {
+    font-size: 1.2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* Space between buttons */
+}
+
+/* Features Section */
+.features {
+  padding: 4rem 0;
+  background-color: var(--ifm-background-color);
+  text-align: center;
+}
+
+.feature-card {
+  background-color: var(--ifm-card-background-color);
+  border-radius: var(--ifm-border-radius);
+  box-shadow: var(--ifm-global-shadow);
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid var(--ifm-toc-border-color);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ifm-global-shadow-hover);
+}
+
+.feature-card__icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card__description {
+  font-size: 1rem;
+  color: var(--ifm-font-color-secondary);
+}
+
+/* Quick Start Section */
+.quickStart {
+  padding: 4rem 0;
+  background-color: var(--ifm-background-color);
+  text-align: center;
+}
+
+.quickStart .sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.quickStart .sectionSubtitle {
+  font-size: 1.2rem;
+  color: var(--ifm-font-color-secondary);
+  margin-bottom: 2rem;
+}
+
+.codeExample {
+  background-color: var(--ifm-code-background);
+  border-radius: var(--ifm-border-radius);
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: left;
+  padding: 1.5rem;
+  box-shadow: var(--ifm-global-shadow);
+  position: relative;
+}
+
+.codeExample pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-size: 0.9rem;
+}
+
+/* Stats Section */
+.stats {
+  padding: 4rem 0;
+  background-color: var(--ifm-background-color);
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.stat-card {
+  background-color: var(--ifm-card-background-color);
+  border-radius: var(--ifm-border-radius);
+  box-shadow: var(--ifm-global-shadow);
+  padding: 2rem;
+  text-align: center;
+  min-width: 200px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid var(--ifm-toc-border-color);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ifm-global-shadow-hover);
+}
+
+.stat-card__value {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+  display: block;
+}
+
+.stat-card__label {
+  font-size: 1.1rem;
+  color: var(--ifm-font-color-secondary);
+  display: block;
+}
+
+/* Support Section */
+.support {
+  padding: 4rem 0;
+  background-color: var(--ifm-background-color);
+  text-align: center;
+}
+
+.supportCard {
+  background-color: var(--ifm-card-background-color);
+  border-radius: var(--ifm-border-radius);
+  box-shadow: var(--ifm-global-shadow);
+  padding: 3rem;
+  max-width: 700px;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid var(--ifm-toc-border-color);
+}
+
+.supportCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ifm-global-shadow-hover);
+}
+
+.supportCard h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.supportCard p {
+  font-size: 1.1rem;
+  color: var(--ifm-font-color-secondary);
+  margin-bottom: 2rem;
+}
+
+.donation-button {
+  background-color: var(--ifm-color-info); /* A nice prominent color */
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: var(--ifm-button-border-radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  box-shadow: var(--ifm-global-shadow);
+}
+
+.donation-button:hover {
+  background-color: var(--ifm-color-info-dark);
+  color: #fff;
+  text-decoration: none;
+}
+
