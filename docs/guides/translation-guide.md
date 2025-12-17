@@ -12,13 +12,13 @@ import MobileMockup from '@site/src/components/MobileMockup';
 
 The library uses a React Context-based approach with `I18nProvider` to supply translation data and the `useI18n` hook to consume it.
 
-### 1. I18nProvider
+### 1. FormioProvider
 
-Wrap your application (or just the form) with the `I18nProvider` to make translations available.
+Pass your i18n configuration to the `FormioProvider` to make translations available throughout your application.
 
 ```tsx
 import React from 'react';
-import { I18nProvider } from '@formio/react-native';
+import { FormioProvider } from '@formio/react-native';
 import MyForm from './MyForm';
 
 const App = () => {
@@ -45,16 +45,16 @@ const App = () => {
   };
 
   return (
-    <I18nProvider config={i18nConfig}>
+    <FormioProvider i18n={i18nConfig}>
       <MyForm />
-    </I18nProvider>
+    </FormioProvider>
   );
 };
 ```
 
 ### 2. useI18n Hook
 
-Use the `useI18n` hook within any component under `I18nProvider` to access the current language, translation function, and RTL status.
+Use the `useI18n` hook within any component under `FormioProvider` to access the current language, translation function, and RTL status.
 
 ```tsx
 import React from 'react';

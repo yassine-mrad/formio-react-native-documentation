@@ -12,14 +12,14 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://example.com',
+  url: 'https://yassine-mrad.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/formio-react-native/',
+  baseUrl: '/formio-react-native-documentation/',
 
   // GitHub pages deployment config.
-  organizationName: 'test-user', // Your GitHub org/user name.
-  projectName: 'formio-react-native', // Your repo name.
+  organizationName: 'yassine-mrad', // Your GitHub org/user name.
+  projectName: 'formio-react-native-documentation', // Your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -36,8 +36,8 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/test-user/formio-react-native/tree/main/doc/',
-          showLastUpdateTime: true,
-          showLastUpdateAuthor: true,
+          showLastUpdateTime: false,
+          showLastUpdateAuthor: false,
           lastVersion: "current",
           versions: {
             current: {
@@ -148,7 +148,7 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href:'https://github.com/test-user/formio-react-native',
+              href:'https://github.com/yassine-mrad/formio-react-native',
             },
             {
               label: 'Support this project ❤️',

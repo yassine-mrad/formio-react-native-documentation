@@ -10,7 +10,7 @@ Supporting Right-to-Left (RTL) languages like Arabic, Hebrew, and Persian is a c
 
 ## Automatic RTL Support
 
-When you set an RTL language in the `I18nProvider`, the library automatically:
+When you set an RTL language in the `FormioProvider`'s `i18n` config, the library automatically:
 
 1.  **Mirrors Layouts**: Flex containers using `row` direction are reversed.
 2.  **Aligns Text**: Text alignment switches from left to right.
@@ -23,6 +23,10 @@ const i18nConfig = {
   translations: { ar: { ... } },
   rtlLanguages: ['ar', 'he'] // 'ar' is in this list, so isRTL becomes true
 };
+
+<FormioProvider i18n={i18nConfig}>
+  <App />
+</FormioProvider>
 ```
 
 <MobileMockup 

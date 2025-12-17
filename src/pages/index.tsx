@@ -100,7 +100,7 @@ function HomepageHeader() {
           </Link>
           <Link
             className="button button--outline button--secondary button--lg"
-            to="[GITHUB_URL_PLACEHOLDER]"
+            to="https://github.com/yassine-mrad/formio-react-native"
             style={{ marginLeft: '1rem' }}
           >
             View on GitHub
