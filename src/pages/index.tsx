@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import { motion } from 'framer-motion';
 import YouTubeVideo from '../components/YouTubeVideo';
@@ -65,23 +66,44 @@ const itemVariants = {
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
+  const bannerUrl = useBaseUrl('/img/formio-react-native-banner.png');
   
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="hero__title">{siteConfig.title}</h1>
-        </motion.div>
-        
+    <header 
+      className={clsx('hero hero--primary', styles.heroBanner)}
+      style={{
+        backgroundImage: `url(${bannerUrl})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        minHeight: '500px',
+        position: 'relative',
+      }}
+    >
+      <div 
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.4)',
+          zIndex: 0,
+        }}
+      />
+      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <motion.p
           className="hero__subtitle"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
+          style={{ 
+            fontSize: '1.5rem', 
+            marginBottom: '2rem',
+            color: 'white',
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)',
+            fontWeight: 'bold',
+          }}
         >
           {siteConfig.tagline}
         </motion.p>
@@ -117,6 +139,7 @@ function Feature({ title, description, icon, index }) {
       className={clsx('col col--4', styles.feature)}
       variants={itemVariants}
       initial="hidden"
+       style={{marginBottom:'20px'}}
       whileInView="visible"
       viewport={{ once: true, margin: '-100px' }}
       transition={{ delay: index * 0.1 }}

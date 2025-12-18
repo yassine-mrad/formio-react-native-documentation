@@ -5,13 +5,13 @@
 
 :root {
   /* Primary Brand Colors */
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+--ifm-color-primary: #355f8f;         /* Base Blue */
+  --ifm-color-primary-dark: #305681;    /* Deep Blue */
+  --ifm-color-primary-darker: #2d517a;  /* Rich Navy */
+  --ifm-color-primary-darkest: #254364; /* Dark Navy */
+  --ifm-color-primary-light: #4676ad;   /* Soft Blue */
+  --ifm-color-primary-lighter: #4e83bf; /* Sky Blue */
+  --ifm-color-primary-lightest: #6a98cf;/* Pale Blue */
   
   /* Accent Colors */
   --ifm-color-accent: #ff6b6b;
@@ -43,13 +43,13 @@
 
 /* Dark mode colors */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #355f8f;         /* Base Blue */
+  --ifm-color-primary-dark: #305681;    /* -10% brightness */
+  --ifm-color-primary-darker: #2d517a;  /* -15% brightness */
+  --ifm-color-primary-darkest: #254364; /* -30% brightness */
+  --ifm-color-primary-light: #3a689d;   /* +10% brightness */
+  --ifm-color-primary-lighter: #3d6ea5; /* +15% brightness */
+  --ifm-color-primary-lightest: #4a84c7;/* +30% brightness */
   
   --ifm-background-color: #1a1a1a;
   --ifm-background-surface-color: #242424;
