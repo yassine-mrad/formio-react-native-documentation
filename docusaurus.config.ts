@@ -165,10 +165,9 @@ const config: Config = {
       additionalLanguages: ['bash', 'json', 'typescript', 'jsx', 'tsx'],
     },
     algolia: {
-      // You'll need to set this up later with Algolia DocSearch
-      appId: 'YOUR_APP_ID',
-      apiKey: 'YOUR_SEARCH_API_KEY',
-      indexName: 'YOUR_INDEX_NAME',
+      appId: 'TQM6BB9D87',
+      apiKey: '1dbff8ae6b08629536aa860286c86a5b',
+      indexName: 'formio-react-native',
     },
   } satisfies Preset.ThemeConfig,
 };
