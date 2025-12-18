@@ -152,7 +152,7 @@ const config: Config = {
             },
             {
               label: 'Support this project ❤️',
-              href: 'https://www.buymeacoffee.com/test-user',
+              href: 'https://buymeacoffee.com/yassinemrag',
             },
           ],
         },
