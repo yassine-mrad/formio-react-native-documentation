@@ -285,7 +285,7 @@ function SupportSection() {
             Your support helps maintain and improve the library for everyone.
           </p>
           <a
-            href="[DONATION_URL_PLACEHOLDER]"
+            href="https://buymeacoffee.com/yassinemrag"
             className="donation-button"
             target="_blank"
             rel="noopener noreferrer"
