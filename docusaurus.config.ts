@@ -35,7 +35,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/test-user/formio-react-native/tree/main/doc/',
+          editUrl: 'https://github.com/yassine-mrad/formio-react-native/tree/main/doc/',
           showLastUpdateTime: false,
           showLastUpdateAuthor: false,
           lastVersion: "current",
@@ -97,7 +97,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          href:  'https://github.com/test-user/formio-react-native',
+          href:  'https://github.com/yassine-mrad/formio-react-native',
           label: 'GitHub',
           position: 'right',
         },
@@ -127,11 +127,11 @@ const config: Config = {
           items: [
             {
               label: 'GitHub Discussions',
-              href: 'https://github.com/test-user/formio-react-native/discussions',
+              href: 'https://github.com/yassine-mrad/formio-react-native/discussions',
             },
             {
               label: 'Issues',
-              href: 'https://github.com/test-user/formio-react-native/issues',
+              href: 'https://github.com/yassine-mrad/formio-react-native/issues',
             },
             {
               label: 'Stack Overflow',
