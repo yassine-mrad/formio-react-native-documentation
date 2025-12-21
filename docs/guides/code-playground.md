@@ -42,11 +42,13 @@ const myTestForm = {
 <FormioForm form={myTestForm} />
 ```
 
-<MobileMockup 
-  src="https://placehold.co/375x600/png?text=Example+App+Playground" 
-  alt="Example App Playground" 
-/>
 
+<MobileMockup 
+
+  title="Example App Playground" 
+>
+ <img src={require('@site/static/img/testing.png').default}  alt="Example App Playground" />
+</MobileMockup>
 ## Creating Your Own Playground Screen
 
 If you are integrating the library into an existing app, we recommend creating a dedicated `PlaygroundScreen` for testing forms.

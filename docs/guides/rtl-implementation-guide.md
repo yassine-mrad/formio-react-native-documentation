@@ -30,9 +30,11 @@ const i18nConfig = {
 ```
 
 <MobileMockup 
-  src="https://placehold.co/375x600/png?text=RTL+Layout+Example" 
-  alt="RTL Layout Example" 
-/>
+
+  title="RTL Layout Example" 
+>
+ <img src={require('@site/static/img/arabic.png').default}  alt="Arabic Form" />
+</MobileMockup>
 
 ## Using RTL Utilities
 

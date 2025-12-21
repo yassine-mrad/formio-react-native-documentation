@@ -121,9 +121,11 @@ const theme = {
 ```
 
 <MobileMockup 
-  src="https://placehold.co/375x600/png?text=Styling+Example" 
-  alt="Styling Example" 
-/>
+
+  title="Styling Example" 
+>
+ <img src={require('@site/static/img/styling.png').default}  alt="Styling Form" />
+</MobileMockup>
 
 ## Dark Mode Support
 

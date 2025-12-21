@@ -19,37 +19,36 @@ Pass your i18n configuration to the `FormioProvider` to make translations availa
 ```tsx
 import React from 'react';
 import { FormioProvider } from '@formio/react-native';
-import MyForm from './MyForm';
+import AppContent from './AppContent';
 
-const App = () => {
-  const i18nConfig = {
-    language: 'en',
-    translations: {
-      en: {
-        'submit': 'Submit',
-        'cancel': 'Cancel',
-        'required': 'This field is required'
-      },
-      fr: {
-        'submit': 'Soumettre',
-        'cancel': 'Annuler',
-        'required': 'Ce champ est requis'
-      },
-      ar: {
-        'submit': 'إرسال',
-        'cancel': 'إلغاء',
-        'required': 'هذا الحقل مطلوب'
-      }
-    },
-    rtlLanguages: ['ar', 'he', 'fa', 'ur'] // Optional: customize RTL languages
-  };
+const customTranslations = {
+  fr: {
+    'First Name': 'Prénom',
+    'Enter your first name': 'Entrez votre prénom',
+  },
+  ar: {
+    'First Name': 'الاسم الأول',
+    'Enter your first name': 'أدخل اسمك الأول',
+  },
+  en: {
+    'First Name': 'First Name',
+    'Enter your first name': 'Enter your first name',
+  },
+};
 
+export default function App() {
   return (
-    <FormioProvider i18n={i18nConfig}>
-      <MyForm />
+    <FormioProvider
+      i18n={{
+        language: 'en',
+        translations: customTranslations,
+        rtlLanguages: ['ar', 'he', 'fa', 'ur'],
+      }}
+    >
+      <AppContent />
     </FormioProvider>
   );
-};
+}
 ```
 
 ### 2. useI18n Hook
@@ -58,39 +57,58 @@ Use the `useI18n` hook within any component under `FormioProvider` to access the
 
 ```tsx
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useI18n } from '@formio/react-native';
 
-const MyComponent = () => {
-  const { language, translate, setLanguage, isRTL } = useI18n();
+function LanguageSwitcher() {
+  const { setLanguage, language } = useI18n();
+  
+  const languages = [
+    { code: 'en', label: 'English' },
+    { code: 'fr', label: 'Français' },
+    { code: 'ar', label: 'العربية' },
+  ];
 
   return (
-    <View>
-      <Text>{translate('welcome_message', 'Welcome!')}</Text>
-      
-      <Button 
-        title={translate('switch_to_french', 'French')} 
-        onPress={() => setLanguage('fr')} 
-      />
-      
-      <Text>Current Language: {language}</Text>
-      <Text>Is RTL: {isRTL ? 'Yes' : 'No'}</Text>
+    <View style={styles.languageSwitcherContainer}>
+      {languages.map((lang) => (
+        <TouchableOpacity
+          key={lang.code}
+          style={[
+            styles.languageButton,
+            {
+              backgroundColor: lang.code === language ? '#4338CA' : '#E5E7EB',
+            },
+          ]}
+          onPress={() => setLanguage(lang.code)}
+        >
+          <Text style={{ color: lang.code === language ? '#fff' : '#1F2937' }}>
+            {lang.label}
+          </Text>
+        </TouchableOpacity>
+      ))}
     </View>
   );
-};
+}
+
+const styles = StyleSheet.create({
+  languageSwitcherContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginVertical: 10,
+  },
+  languageButton: {
+    paddingHorizontal: 18,
+    paddingVertical: 10,
+    borderRadius: 12,
+    marginHorizontal: 5,
+  },
+});
 ```
 
 ## Form Translation
 
 The `FormioForm` component automatically uses the `I18nContext` to translate field labels, placeholders, and error messages if the keys match your translation object.
-
-<MobileMockup 
-  src="https://placehold.co/375x600/png?text=Translation+Example" 
-  alt="Form Translation Example" 
-><div>
-<img src="https://placehold.co/375x600/png?text=Translation+Example" alt="Form Translation Example" />
-</div>
-</MobileMockup>
 
 ### Translation Keys
 When defining your form schema, the text values (labels, placeholders) act as keys.
@@ -112,26 +130,19 @@ const formSchema = {
 // fr: { 'First Name': 'Prénom', 'Enter your first name': 'Entrez votre prénom' }
 ```
 
-## Handling Dynamic Language Changes
+## Visual Examples
 
-The `I18nProvider` is reactive. Calling `setLanguage` will trigger a re-render of all consumers, instantly updating the UI text and layout direction (if switching between LTR and RTL).
+### English (Default)
+<MobileMockup title="English Form" cover>
+  <img src={require('@site/static/img/english.png').default}  alt="English Form" />
+</MobileMockup>
 
-```tsx
-import { TouchableOpacity, Text } from 'react-native';
-import { useI18n } from '@formio/react-native';
+### French
+<MobileMockup title="French Form" cover>
+  <img src={require('@site/static/img/french.png').default}  alt="French Form" />
+</MobileMockup>
 
-const LanguageSwitcher = () => {
-  const { setLanguage } = useI18n();
-
-  return (
-    <>
-      <TouchableOpacity onPress={() => setLanguage('en')}>
-        <Text>English</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => setLanguage('ar')}>
-        <Text>Arabic (RTL)</Text>
-      </TouchableOpacity>
-    </>
-  );
-};
-```
+### Arabic (RTL)
+<MobileMockup title="Arabic Form" cover>
+  <img src={require('@site/static/img/arabic.png').default}  alt="Arabic Form" />
+</MobileMockup>

@@ -10,7 +10,12 @@ This section provides basic examples to help you get started with `formio-react-
 
 ## Simple Form
 
-<MobileMockup placeholder="[EXAMPLE_1_IMAGE_PLACEHOLDER]" title="Simple Form">
+
+<MobileMockup 
+
+  title="Simple Form" 
+>
+ <img src={require('@site/static/img/simplecode.png').default}  alt="Simple Form" />
 </MobileMockup>
 
 ```tsx
@@ -56,9 +61,13 @@ export default SimpleFormExample;
 ```
 
 ## Form with Validation
+<MobileMockup 
 
-<MobileMockup placeholder="[EXAMPLE_2_IMAGE_PLACEHOLDER]" title="Validation Form">
+  title="Validation Form" 
+>
+ <img src={require('@site/static/img/validation.png').default}  alt="Validation Form" />
 </MobileMockup>
+
 
 ```tsx
 import React from 'react';
@@ -116,7 +125,18 @@ export default ValidationFormExample;
 
 ## Multi-step Form (Wizard)
 
-<MobileMockup placeholder="[EXAMPLE_3_IMAGE_PLACEHOLDER]" title="Wizard Form">
+
+<MobileMockup 
+
+  title="First Step" 
+>
+ <img src={require('@site/static/img/firstPage.png').default}  alt="First Step"  />
+</MobileMockup>
+<MobileMockup 
+
+  title="Second Step" 
+>
+ <img src={require('@site/static/img/secondPage.png').default}  alt="Second Step" />
 </MobileMockup>
 
 ```tsx
@@ -125,61 +145,61 @@ import { View, Alert } from 'react-native';
 import { FormioForm } from 'formio-react-native';
 
 const wizardFormSchema = {
-  components: [
-    {
-      type: 'panel',
-      label: 'Step 1: Personal Info',
-      key: 'personalInfo',
-      components: [
-        {
-          type: 'textfield',
-          key: 'firstName',
-          label: 'First Name',
-          validate: { required: true },
-        },
-        {
-          type: 'textfield',
-          key: 'lastName',
-          label: 'Last Name',
-          validate: { required: true },
-        },
-        {
-          type: 'button',
-          action: 'next',
-          label: 'Next',
-        },
-      ],
-    },
-    {
-      type: 'panel',
-      label: 'Step 2: Contact Info',
-      key: 'contactInfo',
-      components: [
-        {
-          type: 'email',
-          key: 'email',
-          label: 'Email',
-          validate: { required: true },
-        },
-        {
-          type: 'phoneNumber',
-          key: 'phone',
-          label: 'Phone Number',
-        },
-        {
-          type: 'button',
-          action: 'prev',
-          label: 'Previous',
-        },
-        {
-          type: 'button',
-          action: 'submit',
-          label: 'Submit',
-        },
-      ],
-    },
-  ],
-};
+                  display: 'wizard',
+                  components: [
+                    {
+                      title: 'Step 1: Personal Info',
+                      key: 'personalInfo',
+                      type: 'panel',
+                      input: false,
+                      tableView: false,
+                      components: [
+                        {
+                          label: 'First Name',
+                          tableView: true,
+                          key: 'firstName',
+                          type: 'textfield',
+                          input: true,
+                          validate: { required: true },
+                        },
+                        {
+                          label: 'Last Name',
+                          tableView: true,
+                          key: 'lastName',
+                          type: 'textfield',
+                          input: true,
+                          validate: { required: true },
+                        },
+                      ],
+                      nextPage: 1,
+                    },
+                    {
+                      title: 'Step 2: Contact Info',
+                      key: 'contactInfo',
+                      type: 'panel',
+                      input: false,
+                      tableView: false,
+                      components: [
+                        {
+                          label: 'Email',
+                          tableView: true,
+                          key: 'email',
+                          type: 'email',
+                          input: true,
+                          validate: { required: true },
+                        },
+                        {
+                          label: 'Phone Number',
+                          tableView: true,
+                          key: 'phone',
+                          type: 'phoneNumber',
+                          input: true,
+                        },
+                      ],
+                      nextPage: null,
+                    },
+                  ],
+                }
 
 function WizardFormExample() {
   const handleSubmit = (submission: any) => {

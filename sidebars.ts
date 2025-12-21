@@ -39,7 +39,6 @@ const sidebars: SidebarsConfig = {
       items: [
         'examples/basic-examples',
         'examples/advanced-examples',
-        'examples/rtl-examples',
       ],
     },
   ],
