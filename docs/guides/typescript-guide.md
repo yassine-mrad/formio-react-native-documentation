@@ -51,10 +51,9 @@ Props accepted by the `FormioForm` component.
 ```typescript
 interface FormProps {
   form: FormioFormSchema;
-  submission?: { data: any };
-  onChange?: (submission: any) => void;
-  onSubmit?: (submission: any) => void;
-  readOnly?: boolean;
+  data?: { data: any };
+  onChange?: (data: any) => void;
+  onSubmit?: (data: any) => void;
   // ... other props
 }
 ```

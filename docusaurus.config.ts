@@ -168,6 +168,7 @@ const config: Config = {
       appId: 'TQM6BB9D87',
       apiKey: '1dbff8ae6b08629536aa860286c86a5b',
       indexName: 'formio-react-native',
+      contextualSearch: true,
     },
   } satisfies Preset.ThemeConfig,
 };

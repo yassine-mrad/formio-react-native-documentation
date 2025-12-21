@@ -28,7 +28,6 @@ const sidebars: SidebarsConfig = {
       items: [
         'api/components',
         'api/core-apis',
-        'api/hooks',
       ],
     },
     'components-reference',

@@ -80,6 +80,7 @@ function HomepageHeader() {
         position: 'relative',
       }}
     >
+      <meta name="algolia-site-verification"  content="B0B733C6022D58EB" />
       <div 
         style={{
           position: 'absolute',

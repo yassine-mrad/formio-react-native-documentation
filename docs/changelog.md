@@ -6,7 +6,7 @@ sidebar_position: 10
 
 This page provides a detailed history of changes for each version of `formio-react-native`.
 
-## Version 1.0.0 (YYYY-MM-DD)
+## Version 1.0.0 (2025-12-17)
 
 ### New Features
 
@@ -24,7 +24,7 @@ This page provides a detailed history of changes for each version of `formio-rea
 
 ---
 
-## Version 0.1.0 (YYYY-MM-DD) - Alpha Release
+## Version 0.1.0 (2025-12-17) - Alpha Release
 
 ### New Features
 

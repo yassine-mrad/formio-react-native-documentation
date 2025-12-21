@@ -87,7 +87,10 @@ The `FormioForm` component automatically uses the `I18nContext` to translate fie
 <MobileMockup 
   src="https://placehold.co/375x600/png?text=Translation+Example" 
   alt="Form Translation Example" 
-/>
+><div>
+<img src="https://placehold.co/375x600/png?text=Translation+Example" alt="Form Translation Example" />
+</div>
+</MobileMockup>
 
 ### Translation Keys
 When defining your form schema, the text values (labels, placeholders) act as keys.

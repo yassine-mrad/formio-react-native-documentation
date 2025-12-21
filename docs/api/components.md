@@ -15,7 +15,7 @@ The primary component for rendering Form.io forms.
 | Prop Name    | Type                                      | Default     | Description                                             |
 | :----------- | :---------------------------------------- | :---------- | :------------------------------------------------------ |
 | `form`       | `FormioFormSchema`                        | `required`  | The Form.io form schema JSON.                           |
-| `submission` | `object`                                  | `{}`        | Initial submission data for the form.                   |
+| `data` | `object`                                  | `{}`        | Initial submission data for the form.                   |
 | `options`    | `FormioOptions`                           | `{}`        | Configuration options for the form renderer.            |
 | `onSubmit`   | `(submission: any) => void`               | `undefined` | Callback function when the form is submitted.           |
 | `onChange`   | `(component: any, value: any) => void`    | `undefined` | Callback function when any component's value changes.   |
