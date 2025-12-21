@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.module.css';
 
-const VIDEO_URL = '[YOUTUBE_VIDEO_URL_PLACEHOLDER]';
+const VIDEO_URL = 'https://www.youtube.com/embed/3AON9awIDzs';
 
 export default function YouTubeVideo(): JSX.Element {
   // Simple check to avoid broken iframe if URL is still placeholder
